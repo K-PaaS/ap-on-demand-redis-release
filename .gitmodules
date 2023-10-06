@@ -1,3 +1,4 @@
-[submodule "src/paas-ta-on-demand-broker"]
-	path = src/paas-ta-on-demand-broker
-	url = https://github.com/PaaS-TA/PAAS-TA-ON-DEMAND-SERVICE-BROKER
+[submodule "src/ap-on-demand-broker"]
+	path = src/ap-on-demand-broker
+	url = https://github.com/K-PaaS/ap-on-demand-broker
+	branch = kpaas
