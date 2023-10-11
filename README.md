@@ -69,12 +69,9 @@
 
   
 
+## ap-ondemand-redis-release
 
-## PAAS-TA-ON-DEMAND-REDIS-RELEASE
-bosh 2.0 PAAS-TA-ON-DEMAND-REDIS-RELEASE
-
-
-## ON-DEMAND Configuration
+### ON-DEMAND Configuration
 - mysql :: 1 machine
 - on-demand-broker :: 1 machine
 - service :: 0...# machine (on-demand-REDIS)
@@ -83,50 +80,50 @@ bosh 2.0 PAAS-TA-ON-DEMAND-REDIS-RELEASE
 
 
 
-## Release 생성
+### Release 생성
 
-[안1] SRC DOWNLOAD 후 생성 
+[안1] SRC DOWNLOAD 후 생성
 ````
 $ cd ~/
-$ git clone https://github.com/PaaS-TA/PAAS-TA-ON-DEMAND-REDIS-RELEASE.git
-$ cd PAAS-TA-ON-DEMAND-REDIS-RELEASE
+$ git clone https://github.com/K-PaaS/ap-on-demand-redis-release.git
+$ cd ap-on-demand-redis-release
 
-$ wget -O src.zip https://nextcloud.paas-ta.org/index.php/s/iRLka6Dxioys2JX/download
+$ wget -O src.zip https://nextcloud.k-paas.org/index.php/s/wHoHJwNKXHCt8GJ/download
 $ unzip src.zip
 $ rm -rf src.zip
 
 # sh create.sh {RELEASE-NAME} {VERSION}
-$ sh create.sh paasta-on-demand-redis 1.2.1
+$ sh create.sh ap-on-demand-redis 1.2.1
 ````
 
 
 
 
 
-[안2] SRC submodule update & build 후 생성 
+[안2] SRC submodule update & build 후 생성
 ````
 $ cd ~/
-$ git clone https://github.com/PaaS-TA/PAAS-TA-ON-DEMAND-REDIS-RELEASE.git
-$ cd PAAS-TA-ON-DEMAND-REDIS-RELEASE
+$ git clone https://github.com/K-PaaS/ap-on-demand-redis-release.git
+$ cd ap-ondemand-redis-release
 $ git submodule init
 $ git submodule update
 
-$ cd  src/paas-ta-on-demand-broker
+$ cd  src/ap-on-demand-broker
 $ gradle build
 
 $ cd  ../..
-$ wget -O src.zip https://nextcloud.paas-ta.org/index.php/s/iRLka6Dxioys2JX/download
+$ wget -O src.zip https://nextcloud.k-paas.org/index.php/s/wHoHJwNKXHCt8GJ/download
 $ unzip src.zip
 $ rm -rf src.zip
 
-$ cd src/paas-ta-on-demand-broker
-$ mv build/libs/paas-ta-on-demand-broker.jar paas-ta-on-demand-broker.jar
+$ cd src/ap-on-demand-broker
+$ mv build/libs/ap-on-demand-broker.jar ap-on-demand-broker.jar
 
 # sh create.sh {RELEASE-NAME} {VERSION}
-$ sh create.sh paasta-on-demand-redis 1.2.1
+$ sh create.sh ap-on-demand-redis 1.2.1
 ````
 
 ## Contributors ✨
-<a href="https://github.com/PaaS-TA/PAAS-TA-ON-DEMAND-REDIS-RELEASE/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=PaaS-TA/PAAS-TA-ON-DEMAND-REDIS-RELEASE" />
+<a href="https://github.com/K-PaaS/ap-on-demand-redis-release/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=K-PaaS/ap-on-demand-redis-release" />
 </a>

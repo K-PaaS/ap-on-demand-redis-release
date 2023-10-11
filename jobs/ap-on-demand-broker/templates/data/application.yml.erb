@@ -11,7 +11,7 @@ bosh:
   version: <%= p('broker.bosh.version')%>
 spring:
   application:
-    name: paas-ta-on-demand-broker
+    name: ap-on-demand-broker
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver 
     url: "jdbc:mysql://<%= link('mariadb-link').instances[0].address%>:<%= link('mariadb-link').p('mariadb.port')%>/on-demand?autoReconnect=true&useUnicode=true&characterEncoding=utf8"
@@ -26,7 +26,7 @@ spring:
 serviceDefinition:
   id: <%= p('broker.service_instance.guid')%>
   name: <%= p('broker.service_instance.name')%>
-  desc: "A paasta source control service for application development.provision parameters : parameters {owner : owner}"
+  desc: "A Application Platform source control service for application development.provision parameters : parameters {owner : owner}"
   bindable: true
   planupdatable: false
   bullet:

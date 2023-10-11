@@ -1,0 +1,7 @@
+---
+name: ap-on-demand-broker
+
+dependencies: []
+
+files:
+- ap-on-demand-broker/ap-on-demand-broker.jar

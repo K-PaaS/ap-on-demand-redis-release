@@ -1,5 +1,5 @@
 ---
-name: paas-ta-on-demand-broker 
+name: ap-on-demand-broker 
 
 templates:
   bin/service_ctl.erb: bin/service_ctl
@@ -10,10 +10,10 @@ templates:
   helpers/ctl_utils.sh: helpers/ctl_utils.sh
 packages:
   - java
-  - paas-ta-on-demand-broker
+  - ap-on-demand-broker
 
 provides:
-  - {name: paas-ta-on-demand-broker-link, type: paas-ta-on-demand-broker, properties: [broker.server.port, broker.datasource.password, broker.service_instance.guid, broker.service_instance.plan.id, broker.service_instance.plan.name, broker.service_instance.plan.desc, broker.bosh.client_id, broker.bosh.client_secret, broker.bosh.url, broker.bosh.oauth_url, broker.bosh.deployment_name, broker.bosh.instance_name, mariadb.port, broker.service_instance.name, broker.service_instance.bullet.name, broker.service_instance.bullet.desc, broker.service_instance.org_limitation, broker.service_instance.space_limitation, broker.cloudfoundry.url, broker.cloudfoundry.sslSkipValidation, broker.cloudfoundry.admin.id, broker.cloudfoundry.admin.password, service.password, service.port]}
+  - {name: ap-on-demand-broker-link, type: ap-on-demand-broker, properties: [broker.server.port, broker.datasource.password, broker.service_instance.guid, broker.service_instance.plan.id, broker.service_instance.plan.name, broker.service_instance.plan.desc, broker.bosh.client_id, broker.bosh.client_secret, broker.bosh.url, broker.bosh.oauth_url, broker.bosh.deployment_name, broker.bosh.instance_name, mariadb.port, broker.service_instance.name, broker.service_instance.bullet.name, broker.service_instance.bullet.desc, broker.service_instance.org_limitation, broker.service_instance.space_limitation, broker.cloudfoundry.url, broker.cloudfoundry.sslSkipValidation, broker.cloudfoundry.admin.id, broker.cloudfoundry.admin.password, service.password, service.port]}
 
 consumes:
   - name: mariadb-link

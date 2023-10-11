@@ -1,0 +1,5 @@
+check process ap-on-demand-broker
+  with pidfile /var/vcap/sys/run/ap-on-demand-broker/ap-on-demand-broker.pid
+  start program "/var/vcap/jobs/ap-on-demand-broker/bin/monit_debugger service_ctl '/var/vcap/jobs/ap-on-demand-broker/bin/service_ctl start'"
+  stop program "/var/vcap/jobs/ap-on-demand-broker/bin/monit_debugger service_ctl '/var/vcap/jobs/ap-on-demand-broker/bin/service_ctl stop'"
+  group vcap
