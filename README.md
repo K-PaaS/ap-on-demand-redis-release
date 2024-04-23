@@ -81,7 +81,7 @@ $ cd ~/
 $ git clone https://github.com/K-PaaS/ap-on-demand-redis-release.git
 $ cd ap-on-demand-redis-release
 
-$ wget -O src.zip https://nextcloud.k-paas.org/index.php/s/wHoHJwNKXHCt8GJ/download
+$ wget -O src.zip https://nextcloud.k-paas.org/index.php/s/HksyPEio3SKMrcr/download
 $ unzip src.zip
 $ rm -rf src.zip
 
@@ -105,7 +105,7 @@ $ cd  src/ap-on-demand-broker
 $ gradle build
 
 $ cd  ../..
-$ wget -O src.zip https://nextcloud.k-paas.org/index.php/s/wHoHJwNKXHCt8GJ/download
+$ wget -O src.zip https://nextcloud.k-paas.org/index.php/s/HksyPEio3SKMrcr/download
 $ unzip src.zip
 $ rm -rf src.zip
 
